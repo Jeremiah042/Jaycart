@@ -1,5 +1,5 @@
 
-export interface PopularProduct {
+export interface PopularProduct{
   id: number;
   name: string;
   price: number;
@@ -8,4 +8,8 @@ export interface PopularProduct {
   category: string;
   instock: boolean;
   color: string;
+  description?: string;
+  returnDays: number;
+  freeDelivery: boolean;
+  reviews: number;
 }

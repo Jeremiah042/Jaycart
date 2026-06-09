@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
-import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { CartProvider } from "@/Context/cartContext";
 
 export const metadata: Metadata = {
   title: "%s - shopcart online store",
@@ -17,15 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en"  suppressHydrationWarning className={`antialiased`}>
+      <html lang="en" suppressHydrationWarning className={`antialiased`}>
         <body className="font-poppins antialiased">
-           <NuqsAdapter>
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
-          </NuqsAdapter>
+          <CartProvider>
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+          </CartProvider>
         </body>
       </html>
     </ClerkProvider>

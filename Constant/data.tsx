@@ -35,6 +35,21 @@ export const categories = [
   { id: "3", name: "Fashon" },
 ];
 
+export type popularProducts = {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  rating: number;
+  reviews: number;
+  inStock: boolean;
+  images: string[];
+  colors: string[];
+  category: string;
+  freeDelivery: boolean;
+  returnDays: number;
+};
+
 export const popularProducts = [
   {
     id: "1",
@@ -45,8 +60,13 @@ export const popularProducts = [
     rating: 5.0,
     category: "Gadget",
     instock: true,
-    color: ["Silver", "gold"],
+    color: ["gold"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description:
+      "Elevate your mobile experience with the iPhone 16 Pro Max,  engineered for those who demand the absolute best in performance, photography, and battery life. Encased in a refined, ultra-durable titanium design, this flagship device pushes the boundaries of what a smartphone can doa very good phone",
+    reviews: 75,
   },
   {
     id: "22",
@@ -59,6 +79,11 @@ export const popularProducts = [
     instock: true,
     color: ["red", "black"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description:
+      "The Camon series is built entirely around photography and content creation, positioning itself as a budget-to-mid-range powerhouse for mobile shooters",
+    reviews: 60,
   },
   {
     id: "3",
@@ -71,6 +96,11 @@ export const popularProducts = [
     instock: true,
     color: ["red"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description:
+      "Escape the noise and immerse yourself in pure, high-fidelity audio. The AuraSound Pro combines studio-grade sound quality with industry-leading Active Noise Cancellation (ANC) and an ultra-ergonomic design. Whether you are commuting, working from home, or locking into a high-intensity workout, these headphones deliver an unmatched listening experience that lasts all day.",
+    reviews: 45,
   },
   {
     id: "4",
@@ -83,10 +113,15 @@ export const popularProducts = [
     instock: true,
     color: ["Silver", "black"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description:
+      "Take absolute control of your day, your fitness, and your connectivity with the Smartwatch. Meticulously crafted with an ultra-durable aerospace aluminum frame and a stunning, scratch-resistant AMOLED display, this watch merges timeless style with bleeding-edge technology. Whether you are tracking a high-intensity workout, answering calls on the go, or maximizing your sleep quality, the Apex Nexus acts as your ultimate, 24/7 personal assistant.",
+    reviews: 70,
   },
   {
     id: "5",
-    name: "Washing Machine",
+    name: " HydraClean Pro Washing Machine",
     price: 400,
     discount: 25,
     image: "/product_5.png",
@@ -95,6 +130,11 @@ export const popularProducts = [
     instock: true,
     color: ["white"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description:
+      "Transform chore day into an effortless experience with the HydraClean Pro. Engineered for modern homes, this high-capacity, front-load washing machine combines advanced stain-removal technology with an ultra-quiet smart inverter motor. Whether you are dealing with delicate silks, heavily soiled gym gear, or a massive load of family bedding, the HydraClean Pro delivers a flawless, hygienic clean while actively protecting your fabrics and your utility bills.",
+    reviews: 20,
   },
   {
     id: "6",
@@ -107,6 +147,11 @@ export const popularProducts = [
     instock: true,
     color: ["black"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description:
+      "Experience your favorite movies, sports, and video games like never before with the TCL QLED 4K Smart TV. Combining cutting-edge Quantum Dot technology with a sleek, bezel-less design, this television delivers breathtakingly vivid colors, deep contrast, and striking clarity. Powered by Google TV, it brings together your favorite streaming apps, live channels, and smart home controls into one seamless, ultra-responsive hub.",
+    reviews: 100,
   },
   {
     id: "26",
@@ -119,6 +164,10 @@ export const popularProducts = [
     instock: true,
     color: ["WHite"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description: "Step into a bold new era of interactive entertainment with the PlayStation 5. Engineered with a custom, ultra-high-speed Solid State Drive (SSD), the PS5 eliminates loading screens entirely, pulling you instantly into sprawling, cinematic worlds. With breathtaking 4K graphics, ultra-smooth 120Hz gameplay, and deeply immersive spatial audio, this is not just a console—it is a gateway to the future of gaming.",
+    reviews: 50,
   },
 
   {
@@ -132,6 +181,10 @@ export const popularProducts = [
     instock: true,
     color: ["light pink"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description: "Upgrade your daily mobile experience with the Samsung Galaxy S23. Designed for those who want flagship-tier power in a sleek, compact, and comfortable form factor, this smartphone brings together striking aesthetics and massive internal upgrades. From capturing brilliant, clear photos in the dark to seamless multitasking and elite gaming, the Galaxy S23 is built to keep up with your lifestyle without breaking a sweat.",
+    reviews: 60,
   },
   {
     id: "9",
@@ -144,6 +197,10 @@ export const popularProducts = [
     instock: true,
     color: ["red"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description: "Enjoy hot coffee, tea, or instant meals wherever life takes you. This innovative 2-in-1 Smart Travel Flask completely replaces bulky traditional kettles and fragile thermos flasks. It allows you to boil fresh water in minutes and instantly seals to lock in that piping-hot temperature for hours. Designed for travelers, office professionals, students, and busy parents, it gives you hot water on demand, completely un-tethered from a kitchen.",
+    reviews: 70,
   },
   {
     id: "19",
@@ -156,6 +213,10 @@ export const popularProducts = [
     instock: true,
     color: ["blue"],
     features: [],
+    freeDelivery: true,
+    returnDays: 14,
+    description: "Upgrade your hosting game and keep the refreshments flowing with the ultimate 2-in-1 Ice Maker & Beverage Refrigerator. Engineered for entertainment spaces, home bars, offices, and RVs, this premium appliance combines a lightning-fast automatic ice maker and a precision-chilled beverage fridge into one sleek, space-saving countertop unit. No more running to the kitchen for ice or drinking lukewarm beverages—everything you need for the perfect drink is right at your fingertips.",
+    reviews: 35,
   },
 ];
 

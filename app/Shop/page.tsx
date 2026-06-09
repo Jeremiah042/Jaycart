@@ -52,13 +52,13 @@ const ShopProduct = () => {
                 <Image
                   src={item.image}
                   alt={item.name || "Product Image"}
-                  className="w-full h-full object-contain mb-4"
+                  className="w-full h-full object-contain mb-4 group-hover:scale-105 transition-transform duration-300"
                   width={400}
                   height={240}
                 />
               </div>
 
-              <h3 className="text-lg font-bold text-gray-800">{item.name}</h3>
+              <h3 className="text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors">{item.name}</h3>
 
               <div className="flex items-center gap-3">
                 <span className="text-xl font-bold">${item.price.toFixed(2)}</span>

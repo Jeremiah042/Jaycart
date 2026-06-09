@@ -6,6 +6,7 @@ import { popularProducts } from "@/Constant/data";
 import { Stars, ShoppingBag } from "lucide-react";
 import { Button } from "./button";
 import Link from "next/link";
+import { useCart } from "@/Context/cartContext";
 
 export const categories = [
   { id: "1", name: "Gadget" },
@@ -16,10 +17,10 @@ export const categories = [
 
 const PopularProduct = () => {
   const [selectedCategory, setSelectedCategory] = useState("Gadget");
+  const { addToCart } = useCart();
 
-  // Filter products by matching category string (case-insensitive)
   const filteredProducts = popularProducts?.filter(
-    (item) => item.category.toLowerCase() === selectedCategory.toLowerCase()
+    (item) => item.category.toLowerCase() === selectedCategory.toLowerCase(),
   );
 
   return (
@@ -49,48 +50,76 @@ const PopularProduct = () => {
           {filteredProducts.map((item) => (
             <div
               key={item.id}
-              className="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col gap-2 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white border border-gray-200 rounded-2xl p-4
+               flex flex-col gap-2 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="relative w-full h-60 flex items-center justify-center">
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-contain mb-4"
-                  width={400}
-                  height={240}
-                />
-              </div>
-
-              <h3 className="text-lg font-bold text-gray-800">{item.name}</h3>
-
-              <div className="flex items-center gap-3">
-                <span className="text-xl font-bold">${item.price.toFixed(2)}</span>
-                {item.discount && (
-                  <span className="text-lg font-medium text-red-500 px-2 py-1 rounded-full">
-                    -{item.discount}% OFF
-                  </span>
-                )}
-              </div>
-
-              <div className="flex items-center gap-2">
-                <div className="flex flex-row text-yellow-400 fill-current">
-                  {[...Array(5)].map((_, i) => (
-                    <Stars
-                      key={i}
-                      size={15}
-                      fill={i + 1 <= Math.floor(item.rating) ? "currentColor" : "none"}
-                    />
-                  ))}
+              <Link
+                href={`/Products/${item.id}`}
+                className="flex flex-col gap-2 group"
+              >
+                <div className="relative w-full h-60 flex items-center justify-center">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-contain mb-4 group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={240}
+                  />
                 </div>
-                <span className="text-sm text-gray-600 font-medium">{item.rating}</span>
-              </div>
 
-              <p className="text-sm font-medium text-green-600">
-                In Stock: {item.instock ? "Yes" : "No"}
-              </p>
-              <p className="text-sm text-gray-500">Colors: {item.color}</p>
+                <h3 className="text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors">
+                  {item.name}
+                </h3>
 
-              <Button className="flex items-center gap-2 mt-auto">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl font-bold">
+                    ${item.price.toFixed(2)}
+                  </span>
+                  {item.discount && (
+                    <span className="text-lg font-medium text-red-500 px-2 py-1 rounded-full">
+                      -{item.discount}% OFF
+                    </span>
+                  )}
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <div className="flex flex-row text-yellow-400 fill-current">
+                    {[...Array(5)].map((_, i) => (
+                      <Stars
+                        key={i}
+                        size={15}
+                        fill={
+                          i + 1 <= Math.floor(item.rating)
+                            ? "currentColor"
+                            : "none"
+                        }
+                      />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-600 font-medium">
+                    {item.rating}
+                  </span>
+                </div>
+
+                <p className="text-sm font-medium text-green-600">
+                  In Stock: {item.instock ? "Yes" : "No"}
+                </p>
+                <p className="text-sm text-gray-500">Colors: {item.color}</p>
+              </Link>
+
+              
+              <Button
+                className="flex items-center gap-2 mt-auto"
+                onClick={() =>
+                  addToCart({
+                    id: item.id,
+                    name: item.name,
+                    price: item.price,
+                    image: item.image,
+                    quantity: 1,
+                  })
+                }
+              >
                 <ShoppingBag size={18} /> Add to Cart
               </Button>
             </div>
