@@ -54,7 +54,7 @@ export const popularProducts = [
   {
     id: "1",
     name: "IPhone 16 Pro Max",
-    price: 1099,
+    price: 1600000,
     discount: 10,
     image: "/product_1.png",
     rating: 5.0,
@@ -71,7 +71,7 @@ export const popularProducts = [
   {
     id: "22",
     name: "Camon 20 Pro",
-    price: 620,
+    price: 620000,
     discount: 15,
     image: "/product_22.png",
     rating: 4.0,
@@ -88,7 +88,7 @@ export const popularProducts = [
   {
     id: "3",
     name: "Smart Headphones",
-    price: 26,
+    price: 26000,
     discount: 25,
     image: "/product_3.png",
     rating: 3.0,
@@ -105,7 +105,7 @@ export const popularProducts = [
   {
     id: "4",
     name: "Smart Watch",
-    price: 120,
+    price: 18000,
     discount: 10,
     image: "/product_4.png",
     rating: 5.0,
@@ -122,7 +122,7 @@ export const popularProducts = [
   {
     id: "5",
     name: " HydraClean Pro Washing Machine",
-    price: 400,
+    price: 400000,
     discount: 25,
     image: "/product_5.png",
     rating: 4.0,
@@ -139,7 +139,7 @@ export const popularProducts = [
   {
     id: "6",
     name: "TCL 45 Inch Smart TV",
-    price: 350,
+    price: 350000,
     discount: 10,
     image: "/product_6.png",
     rating: 4.0,
@@ -156,7 +156,7 @@ export const popularProducts = [
   {
     id: "26",
     name: "Playstation Pro",
-    price: 799,
+    price: 799000,
     discount: 10,
     image: "/product_26.png",
     rating: 5.0,
@@ -173,7 +173,7 @@ export const popularProducts = [
   {
     id: "27",
     name: "Samsung S23",
-    price: 400,
+    price: 400000,
     discount: 15,
     image: "/product_27.png",
     rating: 4.0,
@@ -189,7 +189,7 @@ export const popularProducts = [
   {
     id: "9",
     name: "2 in 1 Waterheater and Flask",
-    price: 56,
+    price: 56000,
     discount: 25,
     image: "/product_9.png",
     rating: 4.0,
@@ -205,7 +205,7 @@ export const popularProducts = [
   {
     id: "19",
     name: "Ice maker cool fridge",
-    price: 1099,
+    price: 1099000,
     discount: 10,
     image: "/product_19.png",
     rating: 5.0,
@@ -222,7 +222,7 @@ export const popularProducts = [
   {
      id: "29",
     name: "Soccer Boot",
-    price: 80,
+    price: 80000,
     discount: 5,
     image: "/product_29.png",
     rating: 3.0,
@@ -238,7 +238,7 @@ export const popularProducts = [
   {
      id: "30",
     name: "Gucci Bag",
-    price: 800,
+    price: 800000,
     discount: 5,
     image: "/product_30.png",
     rating: 3.0,
@@ -254,7 +254,7 @@ export const popularProducts = [
   {
      id: "31",
     name: "Red waterProot jacket",
-    price: 100,
+    price: 100000,
     discount: 5,
     image: "/product_31.png",
     rating: 4.0,
@@ -270,7 +270,7 @@ export const popularProducts = [
   {
      id: "32",
     name: "Black leather jacket",
-    price: 82,
+    price: 82000,
     discount: 5,
     image: "/product_32.png",
     rating: 4.0,
@@ -289,7 +289,7 @@ export const shopProducts = [
   {
     id: "1",
     name: "IPhone 16 Pro Max",
-    price: 1099,
+    price: 1600000,
     discount: 10,
     image: "/product_1.png",
     rating: 5.0,
@@ -301,7 +301,7 @@ export const shopProducts = [
   {
     id: "22",
     name: "Camon 20 Pro",
-    price: 620,
+    price: 620000,
     discount: 15,
     image: "/product_22.png",
     rating: 4.0,
@@ -313,7 +313,7 @@ export const shopProducts = [
   {
     id: "3",
     name: "Smart Headphones",
-    price: 26,
+    price: 26000,
     discount: 25,
     image: "/product_3.png",
     rating: 3.0,
@@ -325,7 +325,7 @@ export const shopProducts = [
   {
     id: "4",
     name: "Smart Watch",
-    price: 120,
+    price: 18000,
     discount: 10,
     image: "/product_4.png",
     rating: 5.0,
@@ -337,7 +337,7 @@ export const shopProducts = [
   {
     id: "5",
     name: "Washing Machine",
-    price: 400,
+    price: 400000,
     discount: 25,
     image: "/product_5.png",
     rating: 4.0,
@@ -349,7 +349,7 @@ export const shopProducts = [
   {
     id: "6",
     name: "TCL 45 Inch Smart TV",
-    price: 350,
+    price: 350000,
     discount: 10,
     image: "/product_6.png",
     rating: 4.0,
@@ -361,7 +361,7 @@ export const shopProducts = [
   {
     id: "7",
     name: "Low power solar fan",
-    price: 39,
+    price: 39000,
     discount: 10,
     image: "/product_7.png",
     rating: 3.0,
@@ -373,7 +373,7 @@ export const shopProducts = [
   {
     id: "8",
     name: "2 in 1 Smart monitor and keyboard",
-    price: 400,
+    price: 400000,
     discount: 15,
     image: "/product_8.png",
     rating: 4.0,
@@ -385,7 +385,7 @@ export const shopProducts = [
   {
     id: "9",
     name: "2 in 1 Waterheater and Flask",
-    price: 56,
+    price: 56000,
     discount: 25,
     image: "/product_9.png",
     rating: 4.0,
@@ -397,7 +397,7 @@ export const shopProducts = [
   {
     id: "10",
     name: "JBL Super laod mini speaker",
-    price: 40,
+    price: 40000,
     discount: 10,
     image: "/product_10.png",
     rating: 5.0,
@@ -409,7 +409,7 @@ export const shopProducts = [
   {
     id: "11",
     name: "Apple Mifi",
-    price: 400,
+    price: 40000,
     discount: 25,
     image: "/product_11.png",
     rating: 4.0,
@@ -421,7 +421,7 @@ export const shopProducts = [
   {
     id: "12",
     name: "Detachable Vacumm base",
-    price: 350,
+    price: 35000,
     discount: 10,
     image: "/product_12.png",
     rating: 4.0,
@@ -433,7 +433,7 @@ export const shopProducts = [
   {
     id: "13",
     name: "Dell MAgnitude 48",
-    price: 409,
+    price: 409000,
     discount: 10,
     image: "/product_13.png",
     rating: 5.0,
@@ -445,7 +445,7 @@ export const shopProducts = [
   {
     id: "14",
     name: "Samsung note24",
-    price: 620,
+    price: 620000,
     discount: 15,
     image: "/product_14.png",
     rating: 4.0,
@@ -457,7 +457,7 @@ export const shopProducts = [
   {
     id: "15",
     name: "Smart phone",
-    price: 180,
+    price: 180000,
     discount: 25,
     image: "/product_15.png",
     rating: 3.0,
@@ -469,7 +469,7 @@ export const shopProducts = [
   {
     id: "16",
     name: " Sony headphone",
-    price: 120,
+    price: 12000,
     discount: 10,
     image: "/product_16.png",
     rating: 5.0,
@@ -481,7 +481,7 @@ export const shopProducts = [
   {
     id: "17",
     name: "Convertable solar deep freezer",
-    price: 400,
+    price: 400000,
     discount: 25,
     image: "/product_17.png",
     rating: 4.0,
@@ -493,7 +493,7 @@ export const shopProducts = [
   {
     id: "18",
     name: "Hisence double cool fridge",
-    price: 350,
+    price: 350000,
     discount: 10,
     image: "/product_18.png",
     rating: 4.0,
@@ -505,7 +505,7 @@ export const shopProducts = [
   {
     id: "19",
     name: "Ice maker cool fridge",
-    price: 1099,
+    price: 1099000,
     discount: 10,
     image: "/product_19.png",
     rating: 5.0,
@@ -517,7 +517,7 @@ export const shopProducts = [
   {
     id: "20",
     name: "Smart TV set",
-    price: 620,
+    price: 620000,
     discount: 15,
     image: "/product_20.png",
     rating: 4.0,
@@ -529,7 +529,7 @@ export const shopProducts = [
   {
     id: "21",
     name: "Oriamo Earbuds",
-    price: 40,
+    price: 40000,
     discount: 5,
     image: "/product_21.png",
     rating: 3.0,
@@ -541,7 +541,7 @@ export const shopProducts = [
   {
     id: "23",
     name: "Super blade blender",
-    price: 120,
+    price: 120000,
     discount: 10,
     image: "/product_23.png",
     rating: 5.0,
@@ -554,7 +554,7 @@ export const shopProducts = [
   {
     id: "24",
     name: "Asus Gaming Laptop",
-    price: 620,
+    price: 620000,
     discount: 15,
     image: "/product_24.png",
     rating: 4.0,
@@ -566,7 +566,7 @@ export const shopProducts = [
   {
     id: "25",
     name: "Wireless Xbox Controller",
-    price: 120,
+    price: 120000,
     discount: 5,
     image: "/product_25.png",
     rating: 4.0,
@@ -578,7 +578,7 @@ export const shopProducts = [
   {
     id: "26",
     name: "Playstation Pro",
-    price: 799,
+    price: 799000,
     discount: 10,
     image: "/product_26.png",
     rating: 5.0,
@@ -591,7 +591,7 @@ export const shopProducts = [
   {
     id: "27",
     name: "Samsung S23",
-    price: 400,
+    price: 400000,
     discount: 15,
     image: "/product_27.png",
     rating: 4.0,
@@ -603,7 +603,7 @@ export const shopProducts = [
   {
     id: "28",
     name: "Samsung Smartwatch",
-    price: 80,
+    price: 80000,
     discount: 5,
     image: "/product_28.png",
     rating: 3.0,
@@ -616,7 +616,7 @@ export const shopProducts = [
   {
      id: "29",
     name: "Soccer Boot",
-    price: 80,
+    price: 80000,
     discount: 5,
     image: "/product_29.png",
     rating: 3.0,
@@ -632,7 +632,7 @@ export const shopProducts = [
   {
      id: "30",
     name: "Gucci Bag",
-    price: 800,
+    price: 800000,
     discount: 5,
     image: "/product_30.png",
     rating: 3.0,
@@ -648,7 +648,7 @@ export const shopProducts = [
   {
      id: "31",
     name: "Red waterProot jacket",
-    price: 100,
+    price: 100000,
     discount: 5,
     image: "/product_31.png",
     rating: 4.0,
@@ -664,7 +664,7 @@ export const shopProducts = [
   {
      id: "32",
     name: "Black leather jacket",
-    price: 82,
+    price: 82000,
     discount: 5,
     image: "/product_32.png",
     rating: 4.0,

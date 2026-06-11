@@ -66,7 +66,7 @@ const ShopProduct = () => {
 
               <div className="flex items-center gap-3">
                 <span className="text-xl font-bold">
-                  ${item.price.toFixed(2)}
+                  {item.price.toFixed(2)}
                 </span>
                 {item.discount && (
                   <span className="text-lg font-medium text-red-500 px-2 py-1 rounded-full">
