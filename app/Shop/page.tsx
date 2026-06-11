@@ -5,14 +5,16 @@ import Image from "next/image";
 import { shopProducts } from "@/Constant/data";
 import { Stars, ShoppingBag, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/Context/cartContext";
 
 const ShopProduct = () => {
   // 1. State to handle the search query
   const [searchQuery, setSearchQuery] = useState("");
+  const { addToCart } = useCart();
 
   // 2. Filter products dynamically based on the search query
   const filteredProducts = shopProducts?.filter((item) =>
-    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -58,10 +60,14 @@ const ShopProduct = () => {
                 />
               </div>
 
-              <h3 className="text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors">{item.name}</h3>
+              <h3 className="text-lg font-bold text-gray-800 group-hover:text-green-600 transition-colors">
+                {item.name}
+              </h3>
 
               <div className="flex items-center gap-3">
-                <span className="text-xl font-bold">${item.price.toFixed(2)}</span>
+                <span className="text-xl font-bold">
+                  ${item.price.toFixed(2)}
+                </span>
                 {item.discount && (
                   <span className="text-lg font-medium text-red-500 px-2 py-1 rounded-full">
                     -{item.discount}% OFF
@@ -75,11 +81,17 @@ const ShopProduct = () => {
                     <Stars
                       key={i}
                       size={15}
-                      fill={i + 1 <= Math.floor(item.rating) ? "currentColor" : "none"}
+                      fill={
+                        i + 1 <= Math.floor(item.rating)
+                          ? "currentColor"
+                          : "none"
+                      }
                     />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600 font-medium">{item.rating}</span>
+                <span className="text-sm text-gray-600 font-medium">
+                  {item.rating}
+                </span>
               </div>
 
               <p className="text-sm font-medium text-green-600">
@@ -88,8 +100,19 @@ const ShopProduct = () => {
               <p className="text-sm text-gray-500">Colors: {item.color}</p>
 
               {/* mt-auto pushes the button to the bottom of the card uniformly */}
-              <Button className="flex items-center gap-2 mt-auto">
-                <ShoppingBag size={18} /> Add to Cart
+              <Button
+                className="flex items-center gap-2 mt-auto"
+                onClick={() =>
+                  addToCart({
+                    id: item.id,
+                    name: item.name,
+                    price: item.price,
+                    image: item.image,
+                    quantity: 1,
+                  })
+                }
+              >
+                <ShoppingBag size={18} /> <span>Add to Cart</span>
               </Button>
             </div>
           ))}
@@ -97,8 +120,10 @@ const ShopProduct = () => {
       ) : (
         /* --- Empty State --- */
         <div className="text-center py-12 border border-dashed border-gray-200 rounded-2xl bg-gray-50">
-          <p className="text-gray-500 font-medium">No products found matching "{searchQuery}"</p>
-          <button 
+          <p className="text-gray-500 font-medium">
+            No products found matching "{searchQuery}"
+          </p>
+          <button
             onClick={() => setSearchQuery("")}
             className="mt-2 text-sm text-blue-600 hover:underline font-semibold"
           >
