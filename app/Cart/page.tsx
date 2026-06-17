@@ -20,7 +20,9 @@ const CartPage = () => {
   useEffect(() => {
     async function fetchRate() {
       try {
-        const res = await fetch("https://api.exchangerate-api.com/v4/latest/USD");
+        const res = await fetch(
+          "https://api.exchangerate-api.com/v4/latest/USD",
+        );
         const data = await res.json();
         if (data?.rates?.NGN) setUsdToNgn(data.rates.NGN);
       } catch {
@@ -44,7 +46,7 @@ const CartPage = () => {
 
   const total = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
-    0
+    0,
   );
 
   if (cartItems.length === 0) {
@@ -63,12 +65,10 @@ const CartPage = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-8">
-
       {/* Header row */}
       <div className="flex flex-wrap items-center justify-between gap-4">
         <h1 className="text-3xl font-bold">
-          Your Cart{" "}
-          <span className="text-green-500">({cartCount} items)</span>
+          Your Cart <span className="text-green-500">({cartCount} items)</span>
         </h1>
 
         {/* Currency Toggle */}
@@ -163,7 +163,7 @@ const CartPage = () => {
           </div>
           <div className="flex justify-between text-gray-600">
             <span>Shipping</span>
-            <span className="text-green-500">Free</span>
+            <span className="text-green-500">Standard</span>
           </div>
           <div className="border-t pt-4 flex justify-between font-bold text-lg">
             <span>Total</span>
